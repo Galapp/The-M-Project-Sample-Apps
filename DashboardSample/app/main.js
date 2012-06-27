@@ -12,6 +12,8 @@ DashboardSample.app = M.Application.design({
     /* Define the entry/start page of your app. This property must be provided! */
     entryPage : 'page1',
 
+	settingsPage : DashboardSample.SettingsPage,
+
     page1: M.PageView.design({
 
         childViews: 'header content',
@@ -34,13 +36,8 @@ DashboardSample.app = M.Application.design({
                 events: {
                     tap: {
                         target: DashboardSample.ApplicationController,
-                        action: function(id) {
-                            this.events.unshift({
-                                label: (this.events.length + 1) + ') ' + M.ViewManager.getViewById(id).label + ' (global)'
-                            });
-                            this.set('events', this.events);
+                        action: "onIconTap"
                         }
-                    }
                 },
                 itemsPerLine: 3,
                 isEditable: NO,

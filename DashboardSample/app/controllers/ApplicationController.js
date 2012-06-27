@@ -51,6 +51,22 @@ DashboardSample.ApplicationController = M.Controller.extend({
         }];
 
         this.set('items', items);
-    }
+    },
+
+	onIconTap: function(id){
+		this.events.unshift({
+			label: (this.events.length + 1) + ') ' + M.ViewManager.getViewById(id).label + ' (global)'
+		});
+		this.set('events', this.events);
+		this.gotoPage(M.ViewManager.getViewById(id).label);
+	},
+
+	gotoPage: function(pageId){
+		switch(pageId.toLowerCase()){
+			case 'settings':
+				this.switchToPage('settingsPage');
+			break;
+		}
+	}
 
 });
