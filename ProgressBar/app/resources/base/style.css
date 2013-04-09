@@ -1,0 +1,54 @@
+.ui-page {
+    opacity: 0;
+}
+
+div.miranda {
+    background-image: url('images/miranda.jpg');
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.miranda.grayscale {
+    top: 0px;
+    background-image: url('images/miranda_grey.jpg');
+}
+
+div.number {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    z-index: 2;
+    font-size: 120px;
+    color: #FFFFFF;
+    -webkit-text-shadow: 0px 0px 10px #333333;
+    -moz-text-shadow: 0px 0px 10px #333333;
+    text-shadow: 0px 0px 10px #333333;
+}
+
+div.speed {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: right;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    -webkit-text-shadow: none;
+    -moz-text-shadow: none;
+    text-shadow: none;
+    font-size: 14px;
+    border-top: 1px solid #888888;
+}
